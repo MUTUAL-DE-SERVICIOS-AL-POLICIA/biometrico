@@ -2208,6 +2208,82 @@ namespace biometrico
 
 
 
+                //CONVERT .DAT
+                foreach (KeyValuePair<string, string> kv in fingerCaptured)
+                {
+                    k = kv.Key;
+                    v = kv.Value;
+
+                    if (k == "LeftFourPrint" || k == "RightFourPrint" || k == "Thumbs" || k == "")
+                    {
+                        //pathFolder = path_picture;
+                    }
+                    else
+                    {
+                        
+
+                        pathFolder = path_fingerprint_dat;
+                        pathTarget = pathFolder + name1[k];
+                        pathTarget = pathTarget.Replace(".wsq", ".dat");
+
+                        
+                        FileStream fs = File.OpenRead(v);
+                        //
+                        byte[] bytes = new byte[fs.Length];
+                        fs.Read(bytes, 0, (int)fs.Length);
+
+                        bool existError = true;
+                        try
+                        {
+                            // 2. Create decode the WSQ file and create a RawImage
+                            using (Dermalog.Afis.ImageContainer.Decoder decoder = new Dermalog.Afis.ImageContainer.Decoder())
+                            {
+                                Dermalog.Afis.ImageContainer.RawImage rawImage = decoder.Decode(bytes);
+
+                                // 3. Create a FingerCode3 encoder and create a template
+                                using (Dermalog.Afis.FingerCode3.Encoder encoder = new Dermalog.Afis.FingerCode3.Encoder())
+                                {
+                                    Dermalog.Afis.FingerCode3.Template template = encoder.Encode(rawImage);
+                                    //FileStream fs2 = File.Create(path_target + "\\" + file_name + ".dat");
+                                    FileStream fs2 = File.Create(pathTarget);                                    
+                                    byte[] data = template.GetData();
+                                    fs2.Write(data, 0, data.Length);
+                                    fs2.Flush();
+                                    fs2.Close();
+                                }
+                            }
+                            existError = false;
+                        }
+                        catch (Exception ex)
+                        {
+                        }
+
+                        if (existError)
+                        {
+                            //errorArray[file_name] = file_name;
+                        }
+
+
+
+
+                    }
+
+
+
+   
+
+                }
+
+
+
+
+
+
+
+
+
+
+
 
 
 

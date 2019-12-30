@@ -8,6 +8,7 @@
     //public string path_picture = "\\\\192.168.2.120\\utic\\PVT\\picture";
     public string path_local = "";  //Get from data.xml "D:\\tst\\04"
     public string path_fingerprint = "\\\\192.168.2.120\\pvt\\fingerprint";
+    public string path_fingerprint_dat = "\\\\192.168.2.120\\pvt\\fingerprint_dat";
     public string path_picture = "\\\\192.168.2.120\\pvt\\picture";
     //REMOTE
     public string path_remote_user = "pvt";

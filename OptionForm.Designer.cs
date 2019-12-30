@@ -70,7 +70,7 @@
         this.tableLayoutPanelCapturingOptions.ColumnCount = 3;
         this.tableLayoutPanelCapturingOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 47.43935F));
         this.tableLayoutPanelCapturingOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.56065F));
-        this.tableLayoutPanelCapturingOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 106F));
+        this.tableLayoutPanelCapturingOptions.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 107F));
         this.tableLayoutPanelCapturingOptions.Controls.Add(this.label5, 1, 3);
         this.tableLayoutPanelCapturingOptions.Controls.Add(this.checkBoxAutoStepping, 0, 0);
         this.tableLayoutPanelCapturingOptions.Controls.Add(this.checkBoxShowQuality, 1, 0);
@@ -98,7 +98,7 @@
         this.label5.AutoSize = true;
         this.label5.Location = new System.Drawing.Point(150, 58);
         this.label5.Name = "label5";
-        this.label5.Size = new System.Drawing.Size(157, 13);
+        this.label5.Size = new System.Drawing.Size(156, 13);
         this.label5.TabIndex = 12;
         this.label5.Text = "Fake Detection Threshold:";
         // 
@@ -215,7 +215,7 @@
         // 
         this.numericUpDownFakeThreshold.Anchor = System.Windows.Forms.AnchorStyles.Left;
         this.numericUpDownFakeThreshold.Enabled = false;
-        this.numericUpDownFakeThreshold.Location = new System.Drawing.Point(313, 55);
+        this.numericUpDownFakeThreshold.Location = new System.Drawing.Point(312, 55);
         this.numericUpDownFakeThreshold.Name = "numericUpDownFakeThreshold";
         this.numericUpDownFakeThreshold.Size = new System.Drawing.Size(50, 20);
         this.numericUpDownFakeThreshold.TabIndex = 11;

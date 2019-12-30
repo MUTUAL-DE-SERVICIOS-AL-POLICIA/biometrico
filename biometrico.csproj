@@ -121,6 +121,10 @@
     <CodeAnalysisFailOnMissingRules>false</CodeAnalysisFailOnMissingRules>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Dermalog.AFIS.FingerCode3, Version=3.3.1.1843, Culture=neutral, PublicKeyToken=97cac07b8409e999, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\Dermalog.Afis.FingerCode3\3.3.1.1843__97cac07b8409e999\Dermalog.AFIS.FingerCode3.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
